@@ -1,8 +1,10 @@
+## The purpose of this script is to cache the inverse of a matrix.
+
 ## makeCacheMatrix creates a set of functions to
-# 1. set the value of the initial matrix, 'x'
-# 2. get the value of the matrix
-# 3. set the value of the inverted matrix, 'x.i'
-# 4. get the value of the inverted matrix
+# 1. set the values of the initial matrix, 'x'
+# 2. get the matrix
+# 3. set the values of the inverted matrix, 'x.i'
+# 4. get the inverted matrix
 
 makeCacheMatrix <- function(x = matrix()) {
         x.i <- NULL                            
@@ -11,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) {
                 x.i <<- NULL                
         }
         get <- function() x                  
-        setinv <- function(inverse) x.i <<- inverse  
+        setinv <- function(solve) x.i <<- solve  
         getinv <- function() x.i              
         list(set = set, get = get,           
              setinv = setinv,
